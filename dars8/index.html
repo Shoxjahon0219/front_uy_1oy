@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Document</title>
+  </head>
+
+  <body class="bg-black text-white">
+    <div class="max-w-[600px] mx-auto">
+      <form id="usersForm" class="flex flex-col my-5 gap-2 max-w-[300px]">
+        <input
+          class="border py-1 px-2"
+          type="text"
+          name="name"
+          placeholder="Name"
+        />
+        <input
+          class="border py-1 px-2"
+          type="number"
+          name="age"
+          placeholder="age"
+        />
+        <select class="border py-1 px-2" name="gender" id="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+        <button class="border py-1">Save</button>
+      </form>
+      <div
+        class="relative overflow-x-auto bg-neutral-primary-soft shadow-xs rounded-base border border-default"
+      >
+        <table class="w-full text-sm text-left rtl:text-right text-body">
+          <thead
+            class="text-sm text-body bg-neutral-secondary-soft border-b rounded-base border-default"
+          >
+            <tr>
+              <th scope="col" class="px-6 py-3 font-medium">No</th>
+              <th scope="col" class="px-6 py-3 font-medium">Name</th>
+              <th scope="col" class="px-6 py-3 font-medium">Age</th>
+              <th scope="col" class="px-6 py-3 font-medium">Gender</th>
+              <th scope="col" class="px-6 py-3 font-medium">Action</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
